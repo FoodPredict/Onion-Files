@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onion Shelf Life Predictor</title>
+</head>
+<body>
+    <h1>Onion Shelf Life Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="storage_temperature">Storage Temperature (°C):</label><br>
+        <input type="number" step="0.1" id="storage_temperature" name="storage_temperature"><br><br>
+
+        <label for="storage_duration">Storage Duration (days):</label><br>
+        <input type="number" step="1" id="storage_duration" name="storage_duration"><br><br>
+
+        <label for="texture">Texture (e.g., rating scale or description):</label><br>
+        <input type="text" id="texture" name="texture"><br><br>
+
+        <label for="microbial_load">Microbial Load (e.g., CFU/g):</label><br>
+        <input type="text" id="microbial_load" name="microbial_load"><br><br>
+
+        <label for="weight_loss">Weight Loss (%):</label><br>
+        <input type="number" step="0.1" id="weight_loss" name="weight_loss"><br><br>
+
+        <input type="submit" value="Predict Shelf Life">
+    </form>
+    <div id="prediction_result">
+        <!-- Prediction result will be displayed here -->
+    </div>
+</body>
+</html>
